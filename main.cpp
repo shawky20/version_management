@@ -10,12 +10,17 @@ int getSum(vector<int> nums){
     return sum;
 }
 
+int getAverage(vector<int> nums){
+    int sum = getSum(nums);
+    return sum / nums.size();
+}
 int main(){
 
     vector<int> nums(10);
     for(int i = 0; i < nums.size(); i++){
         nums[i] = i;
     }
-    cout << getSum(nums) << endl;
+    cout << "The Sum: " << getSum(nums) << endl;
+    cout << "The Average: "<< getAverage(nums) << endl;
     return 0;
 }
